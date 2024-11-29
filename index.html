@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Medicamentos - Postos de Saúde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #297eb6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .medicines, .request, .contact, .locations {
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        h2 {
+            color: #297eb6;
+        }
+        ul {
+            list-style-type: none;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #297eb6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #129bd1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Controle de Medicamentos - Postos de Saúde</h1>
+    <p>Registre a disponibilidade e solicite medicamentos entre as unidades</p>
+</header>
+
+<nav>
+    <a href="#medicines">Medicamentos</a>
+    <a href="#request">Solicitar Medicamentos</a>
+    <a href="#locations">Localizações</a>
+    <a href="#contact">Contato</a>
+</nav>
+
+<div class="container">
+    <section id="medicines" class="medicines">
+        <h2>Disponibilidade de Medicamentos</h2>
+        <div class="form-container">
+            <h3>Registrar Medicamento</h3>
+            <form action="#" method="POST">
+                <label for="medicineName">Nome do Medicamento:</label>
+                <input type="text" id="medicineName" name="medicineName" required>
+                
+                <label for="quantity">Quantidade Disponível:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="unit">Unidade de Saúde:</label>
+                <select id="unit" name="unit" required>
+                    <option value="centro">Posto Saúde Centro</option>
+                    <option value="Centenário">Posto Saúde Centenário</option>
+                    <option value="Serra Alta">Posto Saúde Serra Alta</option>
+                </select>
+                
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="request" class="request">
+        <h2>Solicitar Medicamento entre Unidades</h2>
+        <div class="form-container">
+            <h3>Solicitação de Medicamento</h3>
+            <form action="#" method="POST">
+                <label for="medicineRequest">Nome do Medicamento:</label>
+                <input type="text" id="medicineRequest" name="medicineRequest" required>
+                
+                <label for="requestQuantity">Quantidade Necessária:</label>
+                <input type="number" id="requestQuantity" name="requestQuantity" min="1" required>
+                
+                <label for="sendingUnit">Unidade de Envio:</label>
+                <select id="sendingUnit" name="sendingUnit" required>
+                    <option value="centro">Posto Saúde Centro</option>
+                    <option value="Centenário">Posto Saúde Centenário</option>
+                    <option value="Serra Alta">Posto Saúde Serra Alta</option>
+                </select>
+
+                <label for="receivingUnit">Unidade Receptora:</label>
+                <select id="receivingUnit" name="receivingUnit" required>
+                    <option value="centro">Posto Saúde Centro</option>
+                    <option value="Centenário">Posto Saúde Centenário</option>
+                    <option value="Serra Alta">Posto Saúde Serra Alta</option>
+                </select>
+
+                <button type="submit">Solicitar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="locations" class="locations">
+        <h2>Localizações</h2>
+        <ul>
+            <li><strong>Posto Saúde Centro</strong> R. Mal. Deodoro, 255</li>
+            <li><strong>Posto Saúde Centenário</strong> - R. Augusto Wunderwald</li>
+            <li><strong>Posto Saúde Serra Alta</strong> - R. Mathias Nossol, 1177</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <p>Se você tiver dúvidas ou precisar de informações adicionais, entre em contato conosco:</p>
+        <p><strong>Telefone:</strong> (11) 1234-5678</p>
+        <p><strong>Email:</strong> contato@postosdesaude.com</p>
+    </section>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 Postos de Saúde - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
